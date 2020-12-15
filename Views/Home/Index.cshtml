@@ -1,0 +1,39 @@
+﻿@model List<Registro>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Productos Registrados</h1>
+    
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre del Producto</th>
+                <th scope="col">URL del prpducto</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Celular</th>
+                <th scope="col">Lugar de Compra</th>
+                <th scope="col">Usuario</th>
+            </tr>
+        </thead>
+        @foreach (var registro in Model){
+            <tbody>
+            <tr>
+                <td>@registro.Id</td>
+                <td>@registro.Producto</td>
+                <td>@registro.Foto</td>
+                <td>@registro.Descripcion</td>
+                <td>@registro.Precio</td>
+                <td>@registro.Celular</td>
+                <td>@registro.Lugar</td>
+                <td>@registro.Usuario</td>
+            </tr>
+            </tbody>
+        }
+        
+    </table>
+            
+</div>
